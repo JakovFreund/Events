@@ -31,11 +31,13 @@ var setAge =function(newAge){
 };
 
 bob.setAge=setAge;
-bob.setAge(50);
+bob.setAge(40);
 
 susan.setAge=setAge;
 susan.setAge(50);
 
+susan.ime="Susan";
+bob.ime="Bob";
 
 
 function god(){
@@ -44,3 +46,20 @@ function god(){
     console.log(bob.age);
     console.log(susan.age);
 }
+
+function older(a,b){
+    if (a.age>b.age){
+        console.log(a.ime)
+    }
+    else{
+        if(a.age<b.age){
+            console.log(b.ime)
+        }
+        else{
+            console.log("jednaki")
+        }
+
+    }
+}
+
+older(bob,susan);
